@@ -12,8 +12,9 @@
 1. Download packed zip file
 2. Upload zip file to designated folder
 3. Unpack packed zip file
-4. Change the `BASE_PATH` at `/crm/config.php` & `/discount-api/config.php` to the web base path. (If in main folder, leave like it is)
-5. Test by visiting `example.com/discount-api/test-installation` should display a success message.
+4. Change `BASE_PATH` at `/crm/config.php` & `/discount-api/config.php` to the web base path. (If in main folder, leave like it is)
+5. Change `API_ENDPOINT` at `/discount-api/config.php` to a the valid CRM API endpoint.
+6. Test by visiting `example.com/discount-api/test-installation` should display a success message.
 
 ##### Ubunutu 20.04
 

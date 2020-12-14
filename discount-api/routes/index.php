@@ -1,4 +1,7 @@
 <?php
+if(DEBUG) {
+    ini_set('display_errors', 1);
+}
 
 if(FORCE_SSL && $_SERVER["HTTPS"] != "on")
 {
@@ -9,6 +12,7 @@ if(FORCE_SSL && $_SERVER["HTTPS"] != "on")
 $router = new Router();
 $router->setBasePath(BASE_PATH);
 
+require_once('base.php');
 require_once('discount.php');
 
 $match = $router->match();

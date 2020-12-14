@@ -2,8 +2,22 @@
 
 class Customer {
 
+    /**
+     * The customers unique identifier
+     * @var int
+     */
     protected $id;
+
+    /**
+     * The customers name
+     * @var string
+     */
     protected $name;
+
+    /**
+     * Data since the customer is active
+     * @var string
+     */
     protected $since;
 
     /**
@@ -17,6 +31,10 @@ class Customer {
         $this->name = $name;
         $this->since = $since;
         $this->revenue = $revenue;
+    }
+
+    public function getRevenue() {
+        return $this->revenue;
     }
 
     public function orderCount() {

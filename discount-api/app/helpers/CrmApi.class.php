@@ -8,8 +8,7 @@ class CrmApi {
     }
 
     public function debugEndpoint() {
-        file_get_contents($this->getEndpoint('/debug'));
-
+        return json_decode(file_get_contents($this->getEndpoint('/debug')));
     }
 
 }
