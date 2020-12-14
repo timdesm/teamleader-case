@@ -1,0 +1,16 @@
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny access to config.php
+<Files config.php>
+Order allow,deny
+Deny from all
+</Files>
+
+# Rewrite all requests to index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
